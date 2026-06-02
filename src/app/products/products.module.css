@@ -1,0 +1,839 @@
+.page,
+.detailPage {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at top right, rgba(164, 16, 22, 0.2), transparent 28%),
+    #f4f1eb;
+  color: #121418;
+}
+
+.hero,
+.detailHero {
+  padding: 48px clamp(24px, 4vw, 64px) 36px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 28px;
+  align-items: end;
+}
+
+.heroCopy,
+.heroAside,
+.detailIntro,
+.detailAside,
+.categoryCard,
+.productCard,
+.featureCard,
+.specCard,
+.sceneCard,
+.faqCard,
+.consultPanel {
+  border-radius: 28px;
+}
+
+.heroCopy,
+.detailIntro,
+.heroAside,
+.categoryCard,
+.productCard,
+.featureCard,
+.specCard,
+.sceneCard,
+.faqCard {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(18, 20, 24, 0.08);
+  box-shadow: 0 12px 40px rgba(20, 24, 30, 0.06);
+}
+
+.heroCopy {
+  padding: clamp(28px, 4vw, 52px);
+}
+
+.heroAside {
+  display: grid;
+  gap: 14px;
+  padding: 28px;
+  background:
+    linear-gradient(160deg, rgba(18, 20, 24, 0.96), rgba(115, 16, 21, 0.88)),
+    radial-gradient(circle at top right, rgba(216, 183, 136, 0.28), transparent 24%);
+  color: #f7f1e4;
+}
+
+.heroAside span {
+  display: block;
+  padding-top: 14px;
+  border-top: 1px solid rgba(247, 241, 228, 0.14);
+}
+
+.kicker {
+  margin-bottom: 12px;
+  color: #8d5d46;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.heroCopy h1,
+.detailIntro h1,
+.contentBlock h2,
+.consultPanel h2 {
+  font-family: var(--font-heading);
+  line-height: 1.04;
+}
+
+.heroCopy h1 {
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  max-width: 10ch;
+}
+
+.heroCopy p,
+.detailLead,
+.detailAside p,
+.contentBlock p,
+.faqCard p,
+.consultPanel p {
+  line-height: 1.85;
+  color: #4a4f57;
+}
+
+.heroCopy p {
+  max-width: 58ch;
+  margin-top: 18px;
+}
+
+.categoryPanel,
+.gridSection,
+.detailSection {
+  padding: 0 clamp(24px, 4vw, 64px) 36px;
+}
+
+.categoryPanel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.categoryCard {
+  padding: 24px;
+}
+
+.categoryCard h2 {
+  font-size: 1.2rem;
+}
+
+.categoryCard p {
+  margin-top: 12px;
+  line-height: 1.8;
+  color: #4a4f57;
+}
+
+.sectionHead {
+  max-width: 720px;
+}
+
+.sectionHead h2,
+.contentBlock h2,
+.consultPanel h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.productGrid,
+.featureGrid,
+.specGrid,
+.sceneGrid,
+.faqList,
+.proofGrid,
+.caseGrid,
+.feedbackGrid {
+  margin-top: 28px;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.productCard {
+  overflow: hidden;
+}
+
+.productMedia {
+  position: relative;
+  min-height: 260px;
+  background: #1a1d22;
+}
+
+.productMedia img {
+  object-fit: cover;
+}
+
+.productMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.04) 30%, rgba(0, 0, 0, 0.38) 100%),
+    linear-gradient(135deg, rgba(164, 16, 22, 0.16), transparent 42%);
+}
+
+.index {
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: rgba(247, 241, 228, 0.72);
+}
+
+.productBody {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  padding: 24px 28px 28px;
+}
+
+.tag {
+  margin-top: 8px;
+  color: #8d5d46;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+.productCard h3 {
+  margin-top: 18px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.productCard p {
+  margin-top: 14px;
+  line-height: 1.8;
+  color: #4a4f57;
+}
+
+.cardFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.cardFoot span {
+  color: #8d5d46;
+  font-weight: 600;
+}
+
+.cardFoot a {
+  color: #8a1318;
+  font-weight: 700;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #6a7078;
+  margin-bottom: 24px;
+}
+
+.productHeroShell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.productHeroGallery,
+.productHeroPanel,
+.specPanel,
+.installPanel {
+  border-radius: 30px;
+  border: 1px solid rgba(18, 20, 24, 0.08);
+  box-shadow: 0 12px 40px rgba(20, 24, 30, 0.06);
+}
+
+.productHeroGallery {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.productHeroMain,
+.productHeroThumb {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #1a1d22;
+  border: 0;
+  padding: 0;
+  cursor: zoom-in;
+}
+
+.productHeroMain {
+  min-height: 480px;
+  width: 100%;
+}
+
+.productHeroMainButton {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.heroZoomHint {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(18, 20, 24, 0.62);
+  color: #f7f1e4;
+  font-size: 0.86rem;
+  backdrop-filter: blur(10px);
+}
+
+.productHeroThumbs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.productHeroThumb {
+  min-height: 142px;
+  width: 100%;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.productHeroThumbActive {
+  box-shadow: 0 0 0 2px rgba(178, 137, 83, 0.9);
+}
+
+.productHeroThumb:hover,
+.productHeroThumbActive {
+  transform: translateY(-1px);
+}
+
+.productHeroNav {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(18, 20, 24, 0.54);
+  color: #f7f1e4;
+  backdrop-filter: blur(10px);
+}
+
+.productHeroPrev {
+  left: 18px;
+}
+
+.productHeroNext {
+  right: 18px;
+}
+
+.productHeroMain img,
+.productHeroThumb img,
+.caseVisual img {
+  object-fit: cover;
+}
+
+.productHeroPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 32px;
+  background:
+    linear-gradient(160deg, rgba(18, 20, 24, 0.96), rgba(115, 16, 21, 0.88)),
+    radial-gradient(circle at top right, rgba(216, 183, 136, 0.28), transparent 24%);
+  color: #f7f1e4;
+}
+
+.productHeroPanel h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.06;
+}
+
+.productHeroLead {
+  color: rgba(247, 241, 228, 0.84);
+  line-height: 1.85;
+}
+
+.productHeroPanel p {
+  color: rgba(247, 241, 228, 0.86);
+}
+
+.productScenePills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.scenePill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(247, 241, 228, 0.08);
+  border: 1px solid rgba(247, 241, 228, 0.14);
+  color: #f7f1e4;
+  font-size: 0.9rem;
+}
+
+.quickFactGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.quickFactCard {
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(247, 241, 228, 0.06);
+}
+
+.quickFactCard span {
+  display: block;
+  color: rgba(247, 241, 228, 0.62);
+  font-size: 0.82rem;
+}
+
+.quickFactCard strong {
+  display: block;
+  margin-top: 8px;
+  line-height: 1.55;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.primaryAction,
+.ghostAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 22px;
+  border-radius: 999px;
+}
+
+.primaryAction {
+  background: linear-gradient(135deg, #b28953, #f0d3a4);
+  color: #111;
+  font-weight: 700;
+}
+
+.ghostAction {
+  border: 1px solid rgba(247, 241, 228, 0.2);
+  color: #f7f1e4;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.featureCard {
+  padding: 26px;
+}
+
+.featureCard p {
+  line-height: 1.8;
+}
+
+.textList {
+  margin-top: 20px;
+  padding-left: 20px;
+  line-height: 1.9;
+  color: #4a4f57;
+}
+
+.sceneGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.sceneCard {
+  min-height: 120px;
+  display: flex;
+  align-items: end;
+  padding: 22px;
+  background:
+    linear-gradient(140deg, rgba(18, 20, 24, 0.94), rgba(45, 52, 61, 0.78)),
+    radial-gradient(circle at top right, rgba(216, 183, 136, 0.32), transparent 24%);
+  color: #f7f1e4;
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+}
+
+.faqList {
+  display: grid;
+  gap: 16px;
+}
+
+.proofGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.valueGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.valueCard {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(18, 20, 24, 0.08);
+  box-shadow: 0 12px 40px rgba(20, 24, 30, 0.06);
+}
+
+.valueIndex {
+  display: block;
+  color: #8d5d46;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+}
+
+.valueCard p {
+  margin-top: 18px;
+  line-height: 1.85;
+  color: #4a4f57;
+}
+
+.specLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+  gap: 20px;
+}
+
+.specPanel,
+.installPanel {
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.specPanel h2,
+.installPanel h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.specList {
+  margin-top: 24px;
+}
+
+.specRow {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  padding: 16px 0;
+  border-top: 1px solid rgba(18, 20, 24, 0.08);
+}
+
+.specRow span {
+  color: #8d5d46;
+  font-size: 0.92rem;
+}
+
+.specRow strong {
+  line-height: 1.7;
+}
+
+.proofCard,
+.caseCard,
+.feedbackCard {
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(18, 20, 24, 0.08);
+  box-shadow: 0 12px 40px rgba(20, 24, 30, 0.06);
+}
+
+.proofCard {
+  padding: 22px;
+}
+
+.proofCard span,
+.feedbackCard span {
+  display: block;
+  color: #8d5d46;
+  font-size: 0.88rem;
+}
+
+.proofCard strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.caseGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.caseCard {
+  overflow: hidden;
+}
+
+.caseVisual {
+  position: relative;
+  min-height: 220px;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  cursor: zoom-in;
+  background:
+    linear-gradient(145deg, rgba(18, 20, 24, 0.96), rgba(64, 70, 79, 0.82)),
+    radial-gradient(circle at top right, rgba(216, 183, 136, 0.34), transparent 24%);
+}
+
+.caseVisual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 42%),
+    linear-gradient(180deg, transparent 26%, rgba(0, 0, 0, 0.28) 100%);
+}
+
+.caseCopy {
+  padding: 22px;
+}
+
+.caseCopy h3 {
+  font-size: 1.1rem;
+}
+
+.caseCopy p,
+.feedbackCard p {
+  margin-top: 10px;
+  line-height: 1.8;
+  color: #4a4f57;
+}
+
+.feedbackGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.feedbackCard {
+  padding: 24px;
+}
+
+.faqCard {
+  padding: 24px 26px;
+}
+
+.faqCard h3 {
+  font-size: 1.16rem;
+}
+
+.faqCard p {
+  margin-top: 12px;
+}
+
+.consultPanel {
+  margin: 0 clamp(24px, 4vw, 64px) 56px;
+  padding: clamp(28px, 4vw, 48px);
+  background:
+    linear-gradient(120deg, rgba(18, 20, 24, 0.96), rgba(115, 16, 21, 0.92)),
+    radial-gradient(circle at top right, rgba(216, 183, 136, 0.28), transparent 24%);
+  color: #f7f1e4;
+}
+
+.consultPanel p {
+  margin-top: 14px;
+  color: rgba(247, 241, 228, 0.86);
+}
+
+.consultMeta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.consultMeta p {
+  padding-top: 12px;
+  border-top: 1px solid rgba(247, 241, 228, 0.16);
+}
+
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+}
+
+.lightboxBackdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(10, 11, 14, 0.82);
+}
+
+.lightboxShell {
+  position: absolute;
+  inset: 5vh 4vw;
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 64px;
+  align-items: center;
+  gap: 16px;
+}
+
+.lightboxImageWrap {
+  position: relative;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0f1114;
+}
+
+.lightboxImageWrap img {
+  object-fit: contain;
+}
+
+.lightboxClose,
+.lightboxArrow {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(247, 241, 228, 0.14);
+  color: #f7f1e4;
+  backdrop-filter: blur(12px);
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 2rem;
+}
+
+.lightboxArrow {
+  font-size: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .hero,
+  .categoryPanel,
+  .sceneGrid,
+  .consultMeta,
+  .proofGrid,
+  .feedbackGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .productHeroShell,
+  .specLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .productMedia {
+    min-height: 220px;
+  }
+
+  .productHeroMain {
+    min-height: 360px;
+  }
+
+  .featureGrid,
+  .valueGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .categoryPanel,
+  .productGrid,
+  .featureGrid,
+  .sceneGrid,
+  .consultMeta,
+  .proofGrid,
+  .caseGrid,
+  .feedbackGrid,
+  .valueGrid,
+  .quickFactGrid,
+  .productHeroThumbs {
+    grid-template-columns: 1fr;
+  }
+
+  .cardFoot,
+  .actionRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .heroCopy h1,
+  .sectionHead h2,
+  .consultPanel h2 {
+    max-width: none;
+  }
+
+  .productHeroPanel {
+    padding: 24px;
+  }
+
+  .productHeroMain {
+    min-height: 280px;
+  }
+
+  .specRow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .lightboxShell {
+    inset: 10vh 4vw;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    gap: 10px;
+  }
+
+  .lightboxClose,
+  .lightboxArrow {
+    width: 44px;
+    height: 44px;
+  }
+}
