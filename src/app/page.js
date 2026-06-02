@@ -118,9 +118,9 @@ export default function Home() {
           <div className={styles.heroText}>
             <p className={styles.kicker}>SHANGPIN SENLIN</p>
             <h1 className={styles.heroTitle}>
-              <span className={styles.heroTitleIntro}>为</span>
+              <span className={styles.heroTitleIntro}>高端户外遮阳系统</span>
               <span className={styles.heroTitleFocus}>高端庭院与建筑外部空间</span>
-              <span className={styles.heroTitleSolution}>提供系统化遮阳解决方案</span>
+              <span className={styles.heroTitleSolution}>系统化遮阳解决方案</span>
             </h1>
             <p className={styles.heroLead}>
               尚品森林聚焦电动遮阳棚、智能防风卷帘、折叠天幕与生态凉亭，
