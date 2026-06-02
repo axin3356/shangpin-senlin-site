@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./products.module.css";
+import ContactFooter from "../ContactFooter";
 import { products } from "../../data/products";
 
 export const metadata = {
@@ -52,25 +53,10 @@ export default function ProductsPage() {
         </Link>
       </div>
 
-      <section className={styles.hero}>
-        <div className={styles.heroCopy}>
-          <p className={styles.kicker}>PRODUCTS</p>
-          <h1>尚品森林产品中心</h1>
-          <p>
-            四大产品系统分别解决顶面遮阳、立面防风、大跨度遮蔽和庭院空间围合问题。先选空间，再看结构和配置。
-          </p>
-        </div>
-        <div className={styles.heroAside}>
-          <span>4大核心系统</span>
-          <span>覆盖高端住宅与商业户外空间</span>
-          <span>支持测量、定制、安装与交付咨询</span>
-        </div>
-      </section>
-
       <section className={styles.gridSection}>
         <div className={styles.sectionHead}>
           <p className={styles.kicker}>核心产品</p>
-          <h2>按空间问题选择产品</h2>
+          <h1>按空间问题选择产品</h1>
           <p>
             先看具体产品，再回到底部理解系统差异。这样客户在手机上不需要先读一屏说明，能直接进入详情页判断是否匹配自己的空间。
           </p>
@@ -129,6 +115,7 @@ export default function ProductsPage() {
           ))}
         </div>
       </section>
+      <ContactFooter />
     </main>
   );
 }

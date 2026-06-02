@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import styles from "../products.module.css";
 import { products, productsBySlug } from "../../../data/products";
+import ContactFooter from "../../ContactFooter";
 import ProductCaseGallery from "../ProductCaseGallery";
 import ProductHeroGallery from "../ProductHeroGallery";
 
@@ -75,7 +76,7 @@ export default async function ProductDetailPage({ params }) {
             </div>
 
             <div className={styles.actionRow}>
-              <a href="#consult" className={styles.primaryAction}>
+              <a href="#contact" className={styles.primaryAction}>
                 获取方案报价
               </a>
               <Link href="/products" className={styles.ghostAction}>
@@ -196,21 +197,7 @@ export default async function ProductDetailPage({ params }) {
         </div>
       </section>
 
-      <section className={styles.consultPanel} id="consult">
-        <div>
-          <p className={styles.kicker}>联系咨询</p>
-          <h2>确认尺寸、安装位置和报价后再成交</h2>
-          <p>
-            建议先准备现场照片、预估尺寸、安装位置和使用场景。顾问确认条件后，再给出产品配置、安装方式和报价范围。
-          </p>
-        </div>
-
-        <div className={styles.consultMeta}>
-          <p>企业微信：尚品森林官方顾问</p>
-          <p>咨询电话：400-888-6688</p>
-          <p>淘宝店铺：尚品森林官方旗舰店</p>
-        </div>
-      </section>
+      <ContactFooter />
     </main>
   );
 }

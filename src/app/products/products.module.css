@@ -160,10 +160,13 @@
   max-width: 720px;
 }
 
+.sectionHead h1,
 .sectionHead h2,
 .contentBlock h2,
 .consultPanel h2 {
   font-size: clamp(2rem, 4vw, 3.4rem);
+  font-family: var(--font-heading);
+  line-height: 1.08;
 }
 
 .sectionHead p {
@@ -960,6 +963,7 @@
   }
 
   .heroCopy h1,
+  .sectionHead h1,
   .sectionHead h2,
   .consultPanel h2 {
     max-width: none;
