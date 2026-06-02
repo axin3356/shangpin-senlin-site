@@ -812,17 +812,19 @@
   position: absolute;
   inset: 5vh 4vw;
   display: grid;
-  grid-template-columns: 64px minmax(0, 1fr) 64px;
+  grid-template-columns: 64px minmax(0, auto) 64px;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
 .homeLightboxMedia {
   position: relative;
-  height: 100%;
+  width: min(86vw, 82vh, 920px);
+  aspect-ratio: 1 / 1;
   border-radius: 24px;
   overflow: hidden;
-  background: #0f1114;
+  background: #fff;
 }
 
 .homeLightboxMedia img {
@@ -956,9 +958,14 @@
   }
 
   .homeLightboxShell {
-    inset: 10vh 4vw;
+    inset: 8vh 12px;
     grid-template-columns: 44px minmax(0, 1fr) 44px;
-    gap: 10px;
+    gap: 8px;
+  }
+
+  .homeLightboxMedia {
+    width: min(78vw, 70vh);
+    border-radius: 18px;
   }
 
   .homeLightboxClose,
