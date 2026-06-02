@@ -28,9 +28,30 @@ const categoryNotes = [
   },
 ];
 
+const seoTopics = [
+  {
+    title: "电动遮阳棚怎么选",
+    body: "阳台、露台和商铺门头更关注收纳后的立面整洁度、伸出距离、抗风稳定性和防雨能力。先确认墙体条件和遮阳面积，再判断是否适合全盒式、曲臂式或伸缩式结构。",
+  },
+  {
+    title: "防风卷帘适合哪些空间",
+    body: "防风卷帘适合开放式阳台、阳光房侧立面、酒店走廊和半开放商业空间。它解决的不只是遮阳，也包括风感、轻雨、蚊虫和隐私边界。",
+  },
+  {
+    title: "折叠天幕与生态凉亭的区别",
+    body: "折叠天幕更适合大跨度顶面遮蔽，生态凉亭更偏完整庭院系统。前者强调开合范围，后者强调空间围合、景观表现和卷帘灯光联动。",
+  },
+];
+
 export default function ProductsPage() {
   return (
     <main className={styles.page}>
+      <div className={styles.topBar}>
+        <Link href="/" className={styles.homeLink}>
+          ← 返回首页
+        </Link>
+      </div>
+
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <p className={styles.kicker}>PRODUCTS</p>
@@ -46,19 +67,13 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      <section className={styles.categoryPanel}>
-        {categoryNotes.map((item) => (
-          <article key={item.title} className={styles.categoryCard}>
-            <h2>{item.title}</h2>
-            <p>{item.detail}</p>
-          </article>
-        ))}
-      </section>
-
       <section className={styles.gridSection}>
         <div className={styles.sectionHead}>
           <p className={styles.kicker}>核心产品</p>
           <h2>按空间问题选择产品</h2>
+          <p>
+            先看具体产品，再回到底部理解系统差异。这样客户在手机上不需要先读一屏说明，能直接进入详情页判断是否匹配自己的空间。
+          </p>
         </div>
 
         <div className={styles.productGrid}>
@@ -82,6 +97,34 @@ export default function ProductsPage() {
                   <Link href={`/products/${product.slug}`}>查看详情</Link>
                 </div>
               </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className={styles.categoryPanel} aria-label="产品系统说明">
+        {categoryNotes.map((item) => (
+          <article key={item.title} className={styles.categoryCard}>
+            <h2>{item.title}</h2>
+            <p>{item.detail}</p>
+          </article>
+        ))}
+      </section>
+
+      <section className={styles.seoSection}>
+        <div className={styles.sectionHead}>
+          <p className={styles.kicker}>选型参考</p>
+          <h2>给搜索用户看的产品判断依据</h2>
+          <p>
+            这部分承接电动遮阳棚、防风卷帘、折叠天幕、生态凉亭等自然搜索需求，内容服务客户判断，也服务搜索引擎理解页面主题。
+          </p>
+        </div>
+
+        <div className={styles.seoGrid}>
+          {seoTopics.map((topic) => (
+            <article key={topic.title} className={styles.seoCard}>
+              <h3>{topic.title}</h3>
+              <p>{topic.body}</p>
             </article>
           ))}
         </div>
