@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import styles from "../products.module.css";
 import { products, productsBySlug } from "../../../data/products";
 import ContactFooter from "../../ContactFooter";
+import CustomerServiceWidget from "../../CustomerServiceWidget";
 import ProductCaseGallery from "../ProductCaseGallery";
 import ProductHeroGallery from "../ProductHeroGallery";
 
@@ -76,9 +77,11 @@ export default async function ProductDetailPage({ params }) {
             </div>
 
             <div className={styles.actionRow}>
-              <a href="#contact" className={styles.primaryAction}>
-                获取方案报价
-              </a>
+              <CustomerServiceWidget
+                variant="inline"
+                className={styles.primaryAction}
+                label="获取方案报价"
+              />
               <Link href="/products" className={styles.ghostAction}>
                 返回产品中心
               </Link>

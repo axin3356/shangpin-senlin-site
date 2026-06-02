@@ -4,7 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 import styles from "./site-contact.module.css";
 
-export default function CustomerServiceWidget({ variant = "fixed" }) {
+export default function CustomerServiceWidget({
+  variant = "fixed",
+  className,
+  label,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const isInline = variant === "inline";
 
@@ -12,12 +16,12 @@ export default function CustomerServiceWidget({ variant = "fixed" }) {
     <>
       <button
         type="button"
-        className={isInline ? styles.primaryAction : styles.serviceButton}
+        className={className || (isInline ? styles.primaryAction : styles.serviceButton)}
         onClick={() => setIsOpen(true)}
         aria-haspopup="dialog"
       >
         {isInline ? null : <span className={styles.serviceButtonIcon}>+</span>}
-        {isInline ? "扫码添加客服" : "联系客服"}
+        {label || (isInline ? "扫码添加客服" : "联系客服")}
       </button>
 
       {isOpen ? (
