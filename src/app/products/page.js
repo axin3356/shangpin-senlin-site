@@ -64,7 +64,12 @@ export default function ProductsPage() {
 
         <div className={styles.productGrid}>
           {products.map((product, index) => (
-            <article key={product.slug} className={styles.productCard}>
+            <Link
+              key={product.slug}
+              href={`/products/${product.slug}`}
+              className={styles.productCard}
+              aria-label={`查看${product.name}详情`}
+            >
               <div className={styles.productMedia}>
                 <Image
                   src={product.media.cover}
@@ -80,10 +85,10 @@ export default function ProductsPage() {
                 <p>{product.summary}</p>
                 <div className={styles.cardFoot}>
                   <span>{product.scenes[0]}</span>
-                  <Link href={`/products/${product.slug}`}>查看详情</Link>
+                  <strong>查看详情</strong>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>
