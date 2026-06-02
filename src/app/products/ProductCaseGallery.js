@@ -37,7 +37,7 @@ export default function ProductCaseGallery({ items, images, productName }) {
             </button>
             <div className={styles.caseCopy}>
               <h3>{item}</h3>
-              <p>后续替换成对应项目的实拍图、近景图或完工图即可。</p>
+              <p>重点查看安装后的遮蔽范围、结构收口和空间比例，判断是否适合你的现场条件。</p>
             </div>
           </article>
         ))}

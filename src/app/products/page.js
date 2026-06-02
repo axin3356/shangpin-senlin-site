@@ -36,13 +36,13 @@ export default function ProductsPage() {
           <p className={styles.kicker}>PRODUCTS</p>
           <h1>尚品森林产品中心</h1>
           <p>
-            这里不按平台SKU堆信息，而是按产品系统组织。先让客户理解四大核心产品，再进入独立详情页和咨询路径。
+            四大产品系统分别解决顶面遮阳、立面防风、大跨度遮蔽和庭院空间围合问题。先选空间，再看结构和配置。
           </p>
         </div>
         <div className={styles.heroAside}>
           <span>4大核心系统</span>
           <span>覆盖高端住宅与商业户外空间</span>
-          <span>支持私域咨询与淘宝成交衔接</span>
+          <span>支持测量、定制、安装与交付咨询</span>
         </div>
       </section>
 
@@ -58,7 +58,7 @@ export default function ProductsPage() {
       <section className={styles.gridSection}>
         <div className={styles.sectionHead}>
           <p className={styles.kicker}>核心产品</p>
-          <h2>四款独立详情页产品</h2>
+          <h2>按空间问题选择产品</h2>
         </div>
 
         <div className={styles.productGrid}>

@@ -119,7 +119,7 @@ export default function Home() {
             <h1>为高端庭院与建筑外部空间提供系统化遮阳解决方案</h1>
             <p className={styles.heroLead}>
               尚品森林聚焦电动遮阳棚、智能防风卷帘、折叠天幕与生态凉亭，
-              以产品系统、安装体系和品牌背书共同构成品牌官网第一入口。
+              为别墅庭院、露台阳台、酒店民宿和商业外摆提供可测量、可定制、可交付的户外遮阳系统。
             </p>
             <div className={styles.heroActions}>
               <a href="#contact" className={styles.primaryAction}>
@@ -169,7 +169,7 @@ export default function Home() {
           <p className={styles.sectionKicker}>产品系统</p>
           <h2>四大核心产品系统</h2>
           <p>
-            不按淘宝SKU堆砌信息，而是按品牌解决方案组织，让客户先理解产品层级，再进入具体咨询与成交路径。
+            从顶面遮阳到立面围合，从单品升级到完整庭院方案。客户先确认空间类型，再选择适合的产品系统和安装方式。
           </p>
         </div>
 
@@ -212,7 +212,7 @@ export default function Home() {
           <p className={styles.sectionKicker}>场景解决方案</p>
           <h2>面向高端住宅与商业户外空间</h2>
           <p>
-            这里先按案例组的方式排版，每个场景同时支持图片和视频。后面你只需要替换成真实成交案例素材，不用再改结构。
+            同一套产品在不同空间里的价值并不一样。庭院看重氛围和景观，阳台看重收纳和防风，商业外摆更看重稳定交付和品牌形象。
           </p>
         </div>
 
@@ -224,7 +224,7 @@ export default function Home() {
           <p className={styles.sectionKicker}>国际荣誉</p>
           <h2>奖项、认证与品牌公信力</h2>
           <p>
-            国际设计奖、保险承保与全国安装体系共同构成尚品森林的品牌背书区，区别于普通促销型落地页。
+            国际设计奖、保险承保与全国安装体系共同构成尚品森林的品牌背书，让客户在咨询前先建立基本信任。
           </p>
         </div>
 
@@ -233,7 +233,7 @@ export default function Home() {
             <span className={styles.awardHeroLabel}>INTERNATIONAL CERTIFICATION</span>
             <h3>国际权威认证 品质考究</h3>
             <p>
-              以设计奖项、产品测试与服务能力证明品牌价值，让首页的信任构建不只停留在口号层面。
+              以设计奖项、产品测试与服务能力证明品牌价值，把“高端遮阳”从一句口号落到可核验的品牌资质上。
             </p>
           </div>
 
@@ -251,14 +251,14 @@ export default function Home() {
       <section className={`${styles.section} ${styles.videoSection}`} id="video">
         <div className={styles.videoCopy}>
           <p className={styles.sectionKicker}>品牌视频</p>
-          <h2>首页保留品牌视频入口，而不是只放静态产品图</h2>
+          <h2>用视频呈现结构开合、空间尺度和真实使用感</h2>
           <p>
-            当前先使用品牌视频做首页展示位，后续可替换成品牌代言人专属片、冠军合作片或活动短片。
+            户外遮阳产品只看静态图容易误判质感。视频更适合展示开合过程、安装后的空间尺度，以及白天到夜晚的使用变化。
           </p>
           <ul className={styles.videoPoints}>
-            <li>适合作为首屏延展内容和品牌形象二次强化</li>
-            <li>后续可拆为品牌主片、产品片与案例片三类素材</li>
-            <li>可直接替换为正式代言人视频，无需改动版式结构</li>
+            <li>展示电动开合与结构收纳，降低客户对尺寸和稳定性的疑问</li>
+            <li>让庭院、露台、商业外摆的空间效果更直观</li>
+            <li>适合承接品牌片、产品演示片和案例完工视频</li>
           </ul>
         </div>
 
@@ -274,7 +274,7 @@ export default function Home() {
           <p className={styles.sectionKicker}>服务体系</p>
           <h2>从测量到安装交付的全国服务闭环</h2>
           <p>
-            这部分不是附属说明，而是成交关键。建材类客户更关心能否测量、安装、售后和跨城市交付。
+            遮阳系统不是买回去就能用的标准件。尺寸、墙体条件、排水方向、控制方式和安装交付都需要提前确认。
           </p>
         </div>
 
@@ -292,9 +292,9 @@ export default function Home() {
         <div className={styles.contactCard}>
           <div>
             <p className={styles.sectionKicker}>联系咨询</p>
-            <h2>先用占位信息跑通官网结构，后续再替换真实联系方式</h2>
+            <h2>先确认空间条件，再给出产品配置与报价</h2>
             <p className={styles.contactLead}>
-              当前页面已预留企业微信、手机号、公司地址与淘宝店铺入口，方便后续替换成正式信息。
+              如果你正在规划庭院、露台、阳台或商业外摆空间，可以先提供尺寸、现场照片和使用场景，顾问会给出初步方案方向。
             </p>
           </div>
 
@@ -306,12 +306,12 @@ export default function Home() {
           </div>
 
           <div className={styles.heroActions}>
-            <a href="https://shop.example.com" className={styles.primaryAction}>
-              进入淘宝店铺
-            </a>
-            <a href="tel:4008886688" className={styles.secondaryAction}>
+            <a href="tel:4008886688" className={styles.primaryAction}>
               电话咨询
             </a>
+            <Link href="/products" className={styles.secondaryAction}>
+              查看产品中心
+            </Link>
           </div>
         </div>
       </section>

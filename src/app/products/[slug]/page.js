@@ -78,9 +78,9 @@ export default async function ProductDetailPage({ params }) {
               <a href="#consult" className={styles.primaryAction}>
                 获取方案报价
               </a>
-              <a href="https://shop.example.com" className={styles.ghostAction}>
-                去淘宝查看
-              </a>
+              <Link href="/products" className={styles.ghostAction}>
+                返回产品中心
+              </Link>
             </div>
           </aside>
         </div>
@@ -91,7 +91,7 @@ export default async function ProductDetailPage({ params }) {
           <p className={styles.kicker}>产品价值</p>
           <h2>这款产品主要解决什么问题</h2>
           <p>
-            不讲内部术语，直接回答客户为什么要看下去。先把核心价值讲清楚，再讲参数。
+            户外遮阳产品不能只看名称和价格。先确认它解决的空间问题，再判断结构、尺寸和安装方式是否适合现场。
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default async function ProductDetailPage({ params }) {
       <section className={styles.detailSection}>
         <div className={styles.sectionHead}>
           <p className={styles.kicker}>核心卖点</p>
-          <h2>客户最容易理解的卖点表达</h2>
+          <h2>客户最容易判断的关键卖点</h2>
         </div>
 
         <div className={styles.featureGrid}>
@@ -154,7 +154,7 @@ export default async function ProductDetailPage({ params }) {
         <div className={styles.sectionHead}>
           <p className={styles.kicker}>案例实拍</p>
           <h2>让客户看到真实落地效果</h2>
-          <p>这部分比“已售多少单”更有效，因为客户买的是安装后的效果，不是平台数字。</p>
+          <p>客户真正购买的是安装后的空间效果。案例区优先展示开合状态、结构近景、夜景灯光和现场尺度。</p>
         </div>
 
         <ProductCaseGallery
@@ -167,7 +167,7 @@ export default async function ProductDetailPage({ params }) {
       <section className={styles.detailSection}>
         <div className={styles.sectionHead}>
           <p className={styles.kicker}>客户反馈</p>
-          <h2>用精选反馈建立信任</h2>
+          <h2>来自项目现场的使用反馈</h2>
         </div>
 
         <div className={styles.feedbackGrid}>
@@ -183,7 +183,7 @@ export default async function ProductDetailPage({ params }) {
       <section className={styles.detailSection}>
         <div className={styles.sectionHead}>
           <p className={styles.kicker}>常见问题</p>
-          <h2>看完页面后最常问的几个问题</h2>
+          <h2>咨询前先确认这些问题</h2>
         </div>
 
         <div className={styles.faqList}>
@@ -201,7 +201,7 @@ export default async function ProductDetailPage({ params }) {
           <p className={styles.kicker}>联系咨询</p>
           <h2>确认尺寸、安装位置和报价后再成交</h2>
           <p>
-            这一页的任务不是让客户立刻付钱，而是让客户愿意继续咨询。你后面只需要替换成真实电话、企业微信和淘宝链接。
+            建议先准备现场照片、预估尺寸、安装位置和使用场景。顾问确认条件后，再给出产品配置、安装方式和报价范围。
           </p>
         </div>
 

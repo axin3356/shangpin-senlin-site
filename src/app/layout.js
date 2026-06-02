@@ -16,7 +16,7 @@ const notoSerifSc = Noto_Serif_SC({
 export const metadata = {
   title: "尚品森林 | 高端庭院遮阳系统品牌官网",
   description:
-    "尚品森林品牌官网首页原型，展示电动遮阳棚、防风卷帘、折叠天幕、生态凉亭、品牌荣誉、视频与全国安装服务能力。",
+    "尚品森林品牌官网，展示电动遮阳棚、防风卷帘、折叠天幕、生态凉亭、品牌荣誉、视频与全国安装服务能力。",
 };
 
 export default function RootLayout({ children }) {

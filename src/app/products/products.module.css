@@ -3,6 +3,7 @@
   min-height: 100svh;
   background:
     radial-gradient(circle at top right, rgba(164, 16, 22, 0.2), transparent 28%),
+    radial-gradient(circle at 8% 36%, rgba(216, 183, 136, 0.18), transparent 22%),
     #f4f1eb;
   color: #121418;
 }
@@ -235,6 +236,54 @@
   font-weight: 700;
 }
 
+.breadcrumbs a,
+.cardFoot a,
+.primaryAction,
+.ghostAction,
+.productHeroMainButton,
+.productHeroThumb,
+.productHeroNav,
+.caseVisual,
+.lightboxClose,
+.lightboxArrow {
+  transition: transform 180ms ease, color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.breadcrumbs a:hover,
+.cardFoot a:hover {
+  color: #a41016;
+}
+
+.primaryAction:hover,
+.ghostAction:hover,
+.productHeroThumb:hover,
+.productHeroNav:hover,
+.caseVisual:hover {
+  transform: translateY(-1px);
+}
+
+.primaryAction:active,
+.ghostAction:active,
+.productHeroThumb:active,
+.productHeroNav:active,
+.caseVisual:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.breadcrumbs a:focus-visible,
+.cardFoot a:focus-visible,
+.primaryAction:focus-visible,
+.ghostAction:focus-visible,
+.productHeroMainButton:focus-visible,
+.productHeroThumb:focus-visible,
+.productHeroNav:focus-visible,
+.caseVisual:focus-visible,
+.lightboxClose:focus-visible,
+.lightboxArrow:focus-visible {
+  outline: 2px solid #b28953;
+  outline-offset: 4px;
+}
+
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
@@ -450,6 +499,11 @@
   color: #f7f1e4;
 }
 
+.ghostAction:hover {
+  background: rgba(247, 241, 228, 0.08);
+  border-color: rgba(247, 241, 228, 0.34);
+}
+
 .featureGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -458,6 +512,9 @@
 
 .featureCard {
   padding: 26px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(238, 232, 222, 0.72)),
+    radial-gradient(circle at top right, rgba(178, 137, 83, 0.16), transparent 28%);
 }
 
 .featureCard p {
