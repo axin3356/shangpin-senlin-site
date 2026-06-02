@@ -117,7 +117,11 @@ export default function Home() {
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
             <p className={styles.kicker}>SHANGPIN SENLIN</p>
-            <h1>为高端庭院与建筑外部空间提供系统化遮阳解决方案</h1>
+            <h1 className={styles.heroTitle}>
+              <span className={styles.heroTitleIntro}>为</span>
+              <span className={styles.heroTitleFocus}>高端庭院与建筑外部空间</span>
+              <span className={styles.heroTitleSolution}>提供系统化遮阳解决方案</span>
+            </h1>
             <p className={styles.heroLead}>
               尚品森林聚焦电动遮阳棚、智能防风卷帘、折叠天幕与生态凉亭，
               为别墅庭院、露台阳台、酒店民宿和商业外摆提供可测量、可定制、可交付的户外遮阳系统。
