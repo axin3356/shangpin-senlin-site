@@ -22,7 +22,7 @@ const awards = [
     label: "AMERICAN GOOD DESIGN",
   },
   {
-    title: "法国好设计奖金奖品牌",
+    title: "法国设计奖金奖品牌",
     label: "FRENCH DESIGN AWARD",
   },
 ];
@@ -52,7 +52,7 @@ const sceneShowcases = [
   },
   {
     title: "酒店民宿",
-    note: "适合放夜景、休闲区和大跨度外摆空间素材。",
+    note: "适合夜景、休闲区和大跨度外摆空间素材。",
     stats: "民宿方案",
     videoLabel: "民宿场景视频",
     images: [
@@ -81,6 +81,14 @@ const serviceSteps = [
   "定制生产",
   "安装交付",
   "维护服务",
+];
+
+const featuredProducts = [
+  ...products,
+  ...products.map((product, index) => ({
+    ...product,
+    cardKey: `${product.slug}-duplicate-${index}`,
+  })),
 ];
 
 export default function Home() {
@@ -169,7 +177,7 @@ export default function Home() {
         ))}
       </section>
 
-      <section className={styles.section} id="products">
+      <section className={`${styles.section} ${styles.productSection}`} id="products">
         <div className={`${styles.sectionHead} ${styles.darkSectionHead}`}>
           <p className={styles.sectionKicker}>产品系统</p>
           <h2>四大核心产品系统</h2>
@@ -179,9 +187,9 @@ export default function Home() {
         </div>
 
         <div className={styles.productGrid}>
-          {products.map((item, index) => (
+          {featuredProducts.map((item, index) => (
             <Link
-              key={item.slug}
+              key={item.cardKey ?? item.slug}
               href={`/products/${item.slug}`}
               className={styles.productCard}
               aria-label={`查看${item.name}详情`}
@@ -236,7 +244,7 @@ export default function Home() {
         <div className={styles.awardLayout}>
           <div className={styles.awardHeroCard}>
             <span className={styles.awardHeroLabel}>INTERNATIONAL CERTIFICATION</span>
-            <h3>国际权威认证 品质考究</h3>
+            <h3>国际权威认证 品质更有依据</h3>
             <p>
               以设计奖项、产品测试与服务能力证明品牌价值，把“高端遮阳”从一句口号落到可核验的品牌资质上。
             </p>
