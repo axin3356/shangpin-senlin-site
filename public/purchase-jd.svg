@@ -1,0 +1,17 @@
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="420" rx="34" fill="#FFF8EF"/>
+  <rect x="24" y="24" width="672" height="372" rx="28" fill="url(#bg)"/>
+  <circle cx="594" cy="108" r="88" fill="#C9141D" fill-opacity="0.12"/>
+  <circle cx="138" cy="318" r="92" fill="#C78B4F" fill-opacity="0.13"/>
+  <path d="M128 138C128 113.699 147.699 94 172 94H548C572.301 94 592 113.699 592 138V282C592 306.301 572.301 326 548 326H172C147.699 326 128 306.301 128 282V138Z" fill="white" fill-opacity="0.86"/>
+  <path d="M194 206C194 164.026 228.026 130 270 130H450C491.974 130 526 164.026 526 206C526 247.974 491.974 282 450 282H270C228.026 282 194 247.974 194 206Z" fill="#D71920"/>
+  <text x="360" y="221" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="white">JD</text>
+  <text x="360" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="7" fill="#9D6537">SHANGPIN SENLIN</text>
+  <text x="360" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#3A2A1D">京东商城购买入口</text>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="24" x2="696" y2="396" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#F2E3CF"/>
+    </linearGradient>
+  </defs>
+</svg>

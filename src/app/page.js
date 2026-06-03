@@ -2,28 +2,60 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import SceneShowcaseGrid from "./SceneShowcaseGrid";
+import HonorGallery from "./HonorGallery";
 import ContactFooter from "./ContactFooter";
 import { products } from "../data/products";
 
 const brandProof = [
   "CCTV广告播出",
   "PICC中国人民保险承保",
-  "覆盖300+城市服务",
-  "5000+专业安装师傅",
 ];
 
-const awards = [
+const serviceCities = [
+  { name: "北京", x: 62, y: 16, featured: true },
+  { name: "天津", x: 72, y: 22 },
+  { name: "济南", x: 56, y: 28 },
+  { name: "郑州", x: 43, y: 35 },
+  { name: "西安", x: 27, y: 31, featured: true },
+  { name: "成都", x: 17, y: 50, featured: true },
+  { name: "重庆", x: 29, y: 57 },
+  { name: "武汉", x: 48, y: 53, featured: true },
+  { name: "长沙", x: 47, y: 69 },
+  { name: "南京", x: 68, y: 43, featured: true },
+  { name: "苏州", x: 77, y: 50 },
+  { name: "上海", x: 84, y: 43, featured: true },
+  { name: "杭州", x: 76, y: 62, featured: true },
+  { name: "宁波", x: 88, y: 64 },
+  { name: "厦门", x: 72, y: 80 },
+  { name: "广州", x: 50, y: 84, featured: true },
+  { name: "深圳", x: 61, y: 88, featured: true },
+  { name: "佛山", x: 41, y: 78 },
+];
+
+const honorItems = [
   {
-    title: "MUSE缪斯国际创意奖金奖品牌",
-    label: "MUSE AWARDS",
+    title: "CCTV广告播出证明",
+    src: "/honors/cctv-ad-proof.jpg",
+    alt: "尚品森林 CCTV 广告播出证明",
+    orientation: "landscape",
   },
   {
-    title: "美国好设计奖金奖品牌",
-    label: "AMERICAN GOOD DESIGN",
+    title: "MUSE缪斯国际创意奖金奖",
+    src: "/honors/muse-gold-award.jpg",
+    alt: "尚品森林 MUSE 缪斯国际创意奖金奖证书",
+    orientation: "portrait",
   },
   {
-    title: "法国设计奖金奖品牌",
-    label: "FRENCH DESIGN AWARD",
+    title: "法国好设计奖金奖",
+    src: "/honors/french-design-gold-award.jpg",
+    alt: "尚品森林 法国好设计奖金奖证书",
+    orientation: "portrait",
+  },
+  {
+    title: "美国好设计奖金奖",
+    src: "/honors/american-good-design-gold-award.jpg",
+    alt: "尚品森林 美国好设计奖金奖证书",
+    orientation: "portrait",
   },
 ];
 
@@ -83,13 +115,7 @@ const serviceSteps = [
   "维护服务",
 ];
 
-const featuredProducts = [
-  ...products,
-  ...products.map((product, index) => ({
-    ...product,
-    cardKey: `${product.slug}-duplicate-${index}`,
-  })),
-];
+const featuredProducts = products;
 
 export default function Home() {
   return (
@@ -117,7 +143,9 @@ export default function Home() {
           <nav className={styles.navLinks} aria-label="站点导航">
             <Link href="/products">产品中心</Link>
             <a href="#awards">品牌荣誉</a>
-            <a href="#video">品牌视频</a>
+            <Link href="/services">品牌服务</Link>
+            <Link href="/how-to-buy">如何购买</Link>
+            <Link href="/partner">合作加盟</Link>
             <a href="#contact">联系咨询</a>
           </nav>
         </header>
@@ -168,13 +196,62 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.proofStrip} aria-label="品牌背书">
-        {brandProof.map((item) => (
-          <div key={item} className={styles.proofItem}>
-            <span className={styles.proofDot} />
-            <span>{item}</span>
+      <section className={styles.serviceProofSection} aria-label="服务能力">
+        <article className={styles.serviceProofCard}>
+          <div className={styles.serviceProofCopy}>
+            <p className={styles.serviceProofKicker}>SERVICE NETWORK</p>
+            <h2>
+              <span>300+</span> 城市服务覆盖
+            </h2>
+            <p>
+              重点城市快速响应，支持庭院、露台、阳台和商业外摆项目的测量、安装与售后协同。
+            </p>
           </div>
-        ))}
+          <div className={styles.cityNetwork} aria-label="重点服务城市">
+            <span className={`${styles.cityNode} ${styles.cityCore}`}>服务中枢</span>
+            {serviceCities.map((city) => (
+              <span
+                key={city.name}
+                className={`${styles.cityTag} ${city.featured ? styles.cityTagFeatured : ""}`}
+                style={{ "--city-x": `${city.x}%`, "--city-y": `${city.y}%` }}
+              >
+                {city.name}
+              </span>
+            ))}
+          </div>
+          <div className={styles.proofBadges}>
+            <span>覆盖以实际项目地址确认为准</span>
+            <span>支持测量 / 定制 / 安装 / 售后</span>
+          </div>
+        </article>
+
+        <article className={`${styles.serviceProofCard} ${styles.installProofCard}`}>
+          <div className={styles.serviceProofCopy}>
+            <p className={styles.serviceProofKicker}>INSTALLATION TEAM</p>
+            <h2>
+              <span>5000+</span> 专业安装师傅
+            </h2>
+            <p>
+              从尺寸复核、结构固定到电机调试，交付环节有人负责，降低大件定制产品装不好、用不稳的风险。
+            </p>
+          </div>
+          <div className={styles.installerScene} aria-label="安装交付流程">
+            {["测量复尺", "结构安装", "电机调试"].map((step, index) => (
+              <div key={step} className={styles.installerFigure}>
+                <span className={styles.installerHead} />
+                <span className={styles.installerBody} />
+                <span className={styles.installerTool} />
+                <strong>{step}</strong>
+              </div>
+            ))}
+            <span className={styles.awningLine} />
+          </div>
+          <div className={styles.proofBadges}>
+            {brandProof.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+        </article>
       </section>
 
       <section className={`${styles.section} ${styles.productSection}`} id="products">
@@ -241,24 +318,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className={styles.awardLayout}>
-          <div className={styles.awardHeroCard}>
-            <span className={styles.awardHeroLabel}>INTERNATIONAL CERTIFICATION</span>
-            <h3>国际权威认证 品质更有依据</h3>
-            <p>
-              以设计奖项、产品测试与服务能力证明品牌价值，把“高端遮阳”从一句口号落到可核验的品牌资质上。
-            </p>
-          </div>
-
-          <div className={styles.awardCards}>
-            {awards.map((award) => (
-              <article key={award.title} className={styles.awardCard}>
-                <p className={styles.awardLabel}>{award.label}</p>
-                <h3>{award.title}</h3>
-              </article>
-            ))}
-          </div>
-        </div>
+        <HonorGallery items={honorItems} />
       </section>
 
       <section className={`${styles.section} ${styles.videoSection}`} id="video">
@@ -282,7 +342,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.serviceSection}`}>
+      <section className={`${styles.section} ${styles.serviceSection}`} id="services">
         <div className={styles.sectionHead}>
           <p className={styles.sectionKicker}>服务体系</p>
           <h2>从测量到安装交付的全国服务闭环</h2>

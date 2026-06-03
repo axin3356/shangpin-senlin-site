@@ -1,0 +1,17 @@
+<svg width="720" height="420" viewBox="0 0 720 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="420" rx="34" fill="#FFF8EF"/>
+  <rect x="24" y="24" width="672" height="372" rx="28" fill="url(#bg)"/>
+  <circle cx="586" cy="96" r="82" fill="#FF6A00" fill-opacity="0.12"/>
+  <circle cx="142" cy="328" r="96" fill="#C78B4F" fill-opacity="0.13"/>
+  <path d="M128 138C128 113.699 147.699 94 172 94H548C572.301 94 592 113.699 592 138V282C592 306.301 572.301 326 548 326H172C147.699 326 128 306.301 128 282V138Z" fill="white" fill-opacity="0.86"/>
+  <path d="M192 206C192 165.131 225.131 132 266 132H454C494.869 132 528 165.131 528 206C528 246.869 494.869 280 454 280H266C225.131 280 192 246.869 192 206Z" fill="#FF6A00"/>
+  <text x="360" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="62" font-weight="800" fill="white">淘宝</text>
+  <text x="360" y="74" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="7" fill="#9D6537">SHANGPIN SENLIN</text>
+  <text x="360" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#3A2A1D">淘宝商城购买入口</text>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="24" x2="696" y2="396" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF8"/>
+      <stop offset="1" stop-color="#F2E3CF"/>
+    </linearGradient>
+  </defs>
+</svg>
